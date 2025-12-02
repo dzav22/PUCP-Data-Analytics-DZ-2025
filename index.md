@@ -385,4 +385,40 @@ ALTER TABLE dbo.DVG3_Sucursal
 ADD CONSTRAINT FK_Sucursal_Region
 FOREIGN KEY (RegionID)
 REFERENCES dbo.DVG3_Region (RegionID);
+```
+### 📌 3. INSERCIÓN DE DATOS (DML)
+### 🟦 3.1. Dimensiones
 
+```sql
+INSERT INTO dbo.DVG3_Cliente (ClienteID, TipoCliente, RangoEdad, RangoIngreso, Ocupacion, AniosBanco)
+VALUES
+ (1001, 'Persona Natural', '25-34', 'S/ 3,001 - S/ 5,000', 'Empleado', 3),
+ (1002, 'Persona Natural', '35-44', 'S/ 5,001 - S/ 8,000', 'Independiente', 7);
+
+INSERT INTO dbo.DVG3_Region (RegionID, NombreRegion, ZonaComercial)
+VALUES
+ (1, 'Lima', 'Zona Central'),
+ (2, 'Arequipa', 'Zona Sur'),
+ (3, 'Piura', 'Zona Norte');
+
+```
+
+### 🟦 3.2. Solicitudes
+
+```sql
+INSERT INTO dbo.DVG3_Solicitudes
+ (ClienteID, ProductoID, CanalID, EjecutivoID, SegmentoID, MonedaID, EstadoID, FechaEnvio, MontoSolicitado, DocCompleto)
+VALUES
+ (1001, 10, 1, 501, 1, 1, 1, '2025-05-31', 15000.00, 1),
+ (1002, 20, 2, 502, 2, 1, 2, '2025-05-31', 80000.00, 0);
+```
+
+### 🟦 3.3. Desembolsos
+
+```sql
+INSERT INTO dbo.DVG3_Desembolsos
+ (SolicitudID, Fecha, MontoDesembolsado, Tasa, PlazoMeses, NroCuotas, EntidadReceptoraID)
+VALUES
+ (1, '2025-06-05', 15000.00, 18.50, 36, 36, 1);
+
+```
