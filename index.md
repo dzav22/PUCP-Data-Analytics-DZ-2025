@@ -188,6 +188,8 @@ En la siguiente sección se describe la **arquitectura de datos** propuesta para
 
 ## 1. Creación de tablas (DDL)
 
+Esta capa contiene la definición del modelo relacional implementado para soportar el cálculo del indicador de participación del BCP. Incluye las tablas transaccionales, tablas dimensionales y tablas de referencia provenientes de fuentes internas (BCP) y externas (SBS).
+
 A continuación se muestran ejemplos de código SQL utilizado para crear las tablas principales del modelo.
 
 ### 1.1. Tabla de hechos: DVG3_Desembolsos
@@ -240,4 +242,147 @@ CREATE TABLE dbo.TargetTabla (
     Target_S        DECIMAL(18,2) NULL
 );
 
+CREATE TABLE dbo.DVG3_Desembolsos (
+    DesembolsoID        INT           IDENTITY(1,1) PRIMARY KEY,
+    SolicitudID         INT           NOT NULL,
+    Fecha               DATE          NOT NULL,
+    MontoDesembolsado   DECIMAL(18,2) NOT NULL,
+    Tasa                DECIMAL(5,2)  NULL,
+    PlazoMeses          INT           NULL,
+    NroCuotas           INT           NULL,
+    EntidadReceptoraID  INT           NULL
+);
+
+CREATE TABLE dbo.DVG3_Solicitudes (
+    SolicitudID     INT           IDENTITY(1,1) PRIMARY KEY,
+    ClienteID       INT           NOT NULL,
+    ProductoID      INT           NOT NULL,
+    CanalID         INT           NOT NULL,
+    EjecutivoID     INT           NOT NULL,
+    SegmentoID      INT           NOT NULL,
+    MonedaID        INT           NOT NULL,
+    EstadoID        INT           NOT NULL,
+    FechaEnvio      DATE          NOT NULL,
+    MontoSolicitado DECIMAL(18,2) NOT NULL,
+    DocCompleto     BIT           NOT NULL
+);
+
+CREATE TABLE dbo.DVG3_Cliente (
+    ClienteID     INT          PRIMARY KEY,
+    TipoCliente   VARCHAR(50)  NOT NULL,
+    RangoEdad     VARCHAR(50)  NULL,
+    RangoIngreso  VARCHAR(50)  NULL,
+    Ocupacion     VARCHAR(100) NULL,
+    AniosBanco    INT          NULL
+);
+
+CREATE TABLE dbo.DVG3_Region (
+    RegionID      INT          PRIMARY KEY,
+    NombreRegion  VARCHAR(100) NOT NULL,
+    ZonaComercial VARCHAR(100) NULL
+);
+
+
+CREATE TABLE dbo.DVG3_Campania (
+    CampaniaID        INT           PRIMARY KEY,
+    CampaniaNombre    VARCHAR(200)  NOT NULL,
+    FechaInicio       DATE          NULL,
+    FechaFin          DATE          NULL
+);
+
+
+CREATE TABLE dbo.DVG3_EntidadReceptora (
+    EntidadID    INT           PRIMARY KEY,
+    Nombre       VARCHAR(200)  NOT NULL
+);
+
+CREATE TABLE dbo.DVG3_Ejecutivo (
+    EjecutivoID       INT           PRIMARY KEY,
+    NombreEjecutivo   VARCHAR(200)  NOT NULL,
+    EquipoComercial   VARCHAR(100)  NULL,
+    SucursalID        INT           NULL
+);
+
+CREATE TABLE dbo.DVG3_Sucursal (
+    SucursalID        INT           PRIMARY KEY,
+    NombreSucursal    VARCHAR(200)  NOT NULL,
+    RegionID          INT           NOT NULL
+);
+
+CREATE TABLE dbo.DVG3_Canal (
+    CanalID       INT           PRIMARY KEY,
+    CanalNombre   VARCHAR(200)  NOT NULL,
+    TipoCanal     VARCHAR(50)   NULL
+);
+
+CREATE TABLE dbo.DVG3_Segmento (
+    SegmentoID      INT          PRIMARY KEY,
+    NombreSegmento  VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE dbo.DVG3_Producto (
+    ProductoID     INT           PRIMARY KEY,
+    Nombre         VARCHAR(200)  NOT NULL,
+    Modalidad      VARCHAR(100)  NULL,
+    Tipo           VARCHAR(100)  NULL
+);
+
+CREATE TABLE dbo.DVG3_Moneda (
+    MonedaID        INT           PRIMARY KEY,
+    CodigoMoneda    VARCHAR(10)   NOT NULL,
+    TipoMoneda      VARCHAR(50)   NULL
+);
+
+CREATE TABLE dbo.DVG3_SolicitudEstado (
+    EstadoID           INT           PRIMARY KEY,
+    DescripcionEstado  VARCHAR(200)  NOT NULL
+);
+
+CREATE TABLE dbo.DVG3_MercadoMensual (
+    MercadoMensualID         INT           PRIMARY KEY,
+    Fecha                    DATE          NOT NULL,
+    CantidadPrestamos        INT           NULL,
+    MontoTotalDesembolsado   DECIMAL(18,2) NULL
+);
+
+CREATE TABLE dbo.TargetTabla (
+    AnioMes          CHAR(6)       PRIMARY KEY,      
+    Desembolsos_S    DECIMAL(18,2) NOT NULL,
+    MarketShare      DECIMAL(5,2)  NULL,
+    Target_S         DECIMAL(18,2) NULL
+);
+
+```
+### 2. DEFINICIÓN DE RELACIONES (FOREIGN KEYS)
+
+```sql
+ALTER TABLE dbo.DVG3_Desembolsos
+ADD CONSTRAINT FK_Desemb_Solicitudes
+FOREIGN KEY (SolicitudID)
+REFERENCES dbo.DVG3_Solicitudes (SolicitudID);
+
+ALTER TABLE dbo.DVG3_Solicitudes
+ADD CONSTRAINT FK_Sol_Cliente
+FOREIGN KEY (ClienteID)
+REFERENCES dbo.DVG3_Cliente (ClienteID);
+
+ALTER TABLE dbo.DVG3_Solicitudes
+ADD CONSTRAINT FK_Sol_Producto
+FOREIGN KEY (ProductoID)
+REFERENCES dbo.DVG3_Producto (ProductoID);
+
+ALTER TABLE dbo.DVG3_Solicitudes
+ADD CONSTRAINT FK_Sol_Canal
+FOREIGN KEY (CanalID)
+REFERENCES dbo.DVG3_Canal (CanalID);
+
+ALTER TABLE dbo.DVG3_Solicitudes
+ADD CONSTRAINT FK_Sol_Ejecutivo
+FOREIGN KEY (EjecutivoID)
+REFERENCES dbo.DVG3_Ejecutivo (EjecutivoID);
+
+ALTER TABLE dbo.DVG3_Sucursal
+ADD CONSTRAINT FK_Sucursal_Region
+FOREIGN KEY (RegionID)
+REFERENCES dbo.DVG3_Region (RegionID);
 
