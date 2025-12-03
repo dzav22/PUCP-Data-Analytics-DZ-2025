@@ -1053,3 +1053,26 @@ Obtener detalles (Drill Through):
 
   </div>
 </section>
+
+
+<section id="contacto" style="padding: 90px 0; text-align: center;">
+    <h2 style="font-size: 42px; font-weight: 700; margin-bottom: 10px;">Contacto</h2>
+    <div style="width: 80px; height: 4px; background:#c27b3a; margin: 0 auto 40px auto; border-radius: 2px;"></div>
+    <p style="font-size: 20px; color:#444; margin-bottom: 40px;">
+        ¿Listo para pasar al siguiente nivel empresarial con soluciones de Business Intelligence para tu negocio?
+    </p>
+    <a href="mailto: dzav22@gmail.com" 
+       style="
+        display: inline-block;
+        padding: 16px 40px;
+        background: linear-gradient(135deg, #6a8dff, #8d4cff);
+        color: white;
+        font-size: 18px;
+        border-radius: 40px;
+        text-decoration: none;
+        box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+        transition: 0.25s;">
+        ✉️  Email
+    </a>
+</section>
+
