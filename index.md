@@ -613,7 +613,8 @@ La Capa de Almacenamiento consolida los datos ya transformados en Fabric y expon
 Aquí se materializan las tablas de hechos y dimensiones que dan soporte al KPI de **desembolsos de créditos del BCP**.
 A continuación se muestra la estructura física del **Fabric Data Warehouse (DVG3)**, donde residen las tablas relacionales creadas mediante los scripts SQL de la Capa de Datos. Este entorno constituye la base estructurada sobre la cual se construye el modelo dimensional y las medidas analíticas del proyecto.
 
-![Estructura del Data Warehouse en Fabric](03-Capa-Almacenamiento/warehouse_fabric.png)
+![Estructura del Data Warehouse en Fabric](03-Capa-Almacenamiento/data_warehouse.png)
+
 
 ---
 
@@ -646,9 +647,9 @@ El Data Warehouse se implementa como un **modelo de estrella** centrado en la ta
   - Dimensiones como Cliente, Región, Campaña y Canal se conectan en relaciones **1:N** hacia las tablas de hechos para filtrar correctamente los desembolsos.
 
 > 🖼️ **Modelo Semántico en Fabric**  
-> (Reemplaza la ruta por tu archivo real)
+![Modelo Dimensional / Modelo Semántico](03-Capa-Almacenamiento/modelo_semantico.png)
 
-![Modelo de Datos – Data Warehouse](03-Capa-Almacenamiento/modelo_semantico_DVG3.png)
+
 
 ---
 
