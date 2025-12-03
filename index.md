@@ -828,3 +828,24 @@ RANKX (
     DENSE
 )
 ```
+# 📊 Capa de Presentación (Power BI)
+
+La Capa de Presentación integra todo el trabajo previo de modelado, transformación y aseguramiento de la calidad de datos, convirtiéndolo en una experiencia visual que permite analizar el rendimiento del BCP frente al sistema bancario peruano.
+
+En esta sección se muestran las páginas principales del reporte en Power BI, organizadas para responder las tres preguntas clave del análisis de indicadores estratégicos:
+
+WHAT? → ¿Cuál es el comportamiento actual del KPI?
+
+SO WHAT? → ¿Qué implicancias tiene desviarse del objetivo?
+
+NOW WHAT? → ¿Qué decisiones y acciones deben tomarse?
+
+El reporte fue diseñado bajo un enfoque de claridad ejecutiva, priorizando:
+✓ Mensajes directos
+✓ Métricas clave
+✓ Comparaciones relevantes
+✓ Flujos de navegación simples (pestañas superiores)
+✓ Uso de drill-through para profundizar en el análisis mensual
+
+A continuación, se presentan las vistas principales del reporte desarrolladas en Power BI.
+
