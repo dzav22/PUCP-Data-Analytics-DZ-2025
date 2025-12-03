@@ -989,7 +989,31 @@ Visualización principal:
 Obtener detalles (Drill Through):
 ![Detalle P10](./04-Capa-Presentacion/imagen25.png)
 
+## 📘 Participación del Grupo
+<section style="padding: 50px 0;">
+  <h2 style="font-size: 30px; font-weight: 700; margin-bottom: 15px;">Participación del Grupo</h2>
 
+  <table style="border-collapse: collapse; width: 380px; font-size: 16px;">
+      <tr>
+          <th style="border: 1px solid #000; padding: 8px; background:#f2f2f2;">Participante</th>
+          <th style="border: 1px solid #000; padding: 8px; background:#f2f2f2;">Participación en el proyecto</th>
+      </tr>
+      <tr>
+          <td style="border: 1px solid #000; padding: 8px;">Diego Zavaleta</td>
+          <td style="border: 1px solid #000; padding: 8px;">70%</td>
+      </tr>
+      <tr>
+          <td style="border: 1px solid #000; padding: 8px;">Wilfredo Bazán</td>
+          <td style="border: 1px solid #000; padding: 8px;">30%</td>
+      </tr>
+      <tr>
+          <td style="border: 1px solid #000; padding: 8px; font-weight:700;">Total</td>
+          <td style="border: 1px solid #000; padding: 8px; font-weight:700;">100%</td>
+      </tr>
+  </table>
+</section>
+
+---
 
 <section style="padding: 60px 0; text-align: center;">
   <h2 style="font-size: 42px; font-weight: 700; margin-bottom: 10px;">Stack Tecnológico</h2>
