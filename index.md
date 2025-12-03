@@ -1,14 +1,7 @@
-<!-- HEADER CON LOGO DEL BCP -->
-<div style="width: 100%; display: flex; align-items: center; padding: 12px 0 20px 0;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Logo_Banco_de_Credito_del_Peru.svg/2560px-Logo_Banco_de_Credito_del_Peru.svg.png"
-         alt="Logo BCP"
-         style="height: 55px; margin-right: 15px;">
-    <h1 style="margin: 0; font-size: 28px; font-weight: 700; color:#0c2340;">
-        Banco de Crédito del Perú – Dashboard Comercial
-    </h1>
-</div>
+<p align="left">
+  <img src="https://logodownload.org/wp-content/uploads/2019/05/bcp-logo-1.png" alt="Logo BCP" height="60">
+</p>
 
-<hr style="margin: 15px 0 30px 0;">
 # 📊 Proyecto Final – Indicador de Participación de Créditos del BCP
 
 ## 🏦 Banco de Crédito del Perú (BCP)
