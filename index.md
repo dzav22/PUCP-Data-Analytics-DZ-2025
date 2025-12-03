@@ -1029,9 +1029,10 @@ El proyecto consolidó conocimientos avanzados en:
 
 - Storytelling con datos y diseño de dashboards ejecutivos
 
-✔ 7. Entrega profesional con enfoque corporativo
+✔ 7. Entrega profesional con enfoque corporativo 
 
 La construcción del flujo completo —desde la capa de datos hasta la capa de presentación— demostró la capacidad del equipo para replicar un proceso real de analítica empresarial, como el que se utiliza en áreas de inteligencia comercial, finanzas y estrategia.
+
 ---
 <section style="padding: 50px 0;">
   <h2 style="font-size: 30px; font-weight: 700; margin-bottom: 15px;">Participación del Grupo</h2>
