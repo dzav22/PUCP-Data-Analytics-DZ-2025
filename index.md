@@ -1019,15 +1019,15 @@ El análisis respaldó el Business Case, confirmando el impacto económico de va
 
 El proyecto consolidó conocimientos avanzados en:
 
-Modelado dimensional (Data Warehouse)
+- Modelado dimensional (Data Warehouse)
 
-Power BI y DAX para KPIs de negocio
+- Power BI y DAX para KPIs de negocio
 
-Orquestación con Microsoft Fabric
+- Orquestación con Microsoft Fabric
 
-Procesamiento automatizado con Python
+- Procesamiento automatizado con Python
 
-Storytelling con datos y diseño de dashboards ejecutivos
+- Storytelling con datos y diseño de dashboards ejecutivos
 
 ✔ 7. Entrega profesional con enfoque corporativo
 
