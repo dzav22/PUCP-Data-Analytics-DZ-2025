@@ -656,11 +656,154 @@ Todas ellas se definen en la tabla de medidas **`_Medidas`** dentro del modelo s
 
 #### 1️⃣ Medidas base de desembolsos
 
-**✅ Dese PROM – Monto promedio desembolsado**
+✅ Dese PROM – Monto promedio desembolsado
 
 > Promedio del monto desembolsado en el contexto actual de filtro.
 
-```dax
 Dese PROM =
 AVERAGE ( 'DVG3 Desembolsos'[Monto_desembolsado] )
+
+✅ Dese SUM – Monto total desembolsado
+
+Suma total del monto desembolsado en el periodo/contexto analizado.
+
+Dese SUM =
+SUM ( 'DVG3 Desembolsos'[Monto_desembolsado] )
+
+2️⃣ Comparaciones temporales (MoM, QoQ, YoY)
+
+✅ Dese SUM PM – Desembolsos del mes previo
+
+Total desembolsado desplazado un mes hacia atrás usando la tabla Calendario.
+
+Dese SUM PM =
+CALCULATE (
+    [Dese SUM],
+    DATEADD ( Calendario[Date], -1, MONTH )
+)
+
+✅ Dese SUM PQ – Desembolsos del trimestre previo
+
+Dese SUM PQ =
+CALCULATE (
+    [Dese SUM],
+    DATEADD ( Calendario[Date], -1, QUARTER )
+)
+
+✅ Dese SUM PY – Desembolsos del año previo
+
+Dese SUM PY =
+CALCULATE (
+    [Dese SUM],
+    DATEADD ( Calendario[Date], -1, YEAR )
+)
+
+✅ Dese SUM MoM – Variación % Mes vs Mes Anterior
+
+Crecimiento (o caída) porcentual de los desembolsos respecto al mes anterior.
+
+Dese SUM MoM =
+DIVIDE (
+    [Dese SUM] - [Dese SUM PM],
+    [Dese SUM PM]
+)
+
+
+✅ Dese SUM QoQ – Variación % Trimestre vs Trimestre Anterior
+
+Dese SUM QoQ =
+DIVIDE (
+    [Dese SUM] - [Dese SUM PQ],
+    [Dese SUM PQ]
+)
+
+
+✅ Dese SUM YoY – Variación % Año vs Año Anterior
+
+Dese SUM YoY =
+DIVIDE (
+    [Dese SUM] - [Dese SUM PY],
+    [Dese SUM PY]
+)
+
+3️⃣ Medidas de soporte al análisis temporal
+
+✅ Desembolsos mensuales – Serie limpia por mes
+
+Reconstruye la serie de desembolsos mes a mes usando las fechas de la tabla Calendario, garantizando alineamiento entre calendario y hechos.
+
+Desembolsos mensuales =
+VAR FechasMes =
+    VALUES ( 'Calendario'[Date] )
+RETURN
+CALCULATE (
+    SUM ( 'DVG3 Desembolsos'[Monto_desembolsado] ),
+    TREATAS ( FechasMes, 'DVG3 Desembolsos'[Fecha] )
+)
+
+4️⃣ Metas y benchmark de negocio
+
+🎯 Target mensual S/ – Meta mensual de desembolsos
+
+Asigna una meta fija de desembolsos solo para el rango de fechas del proyecto (entre mayo 2025 y mayo 2027).
+Fuera de ese rango, la medida devuelve BLANK().
+
+Target mensual S/ =
+VAR mIni =
+    DATE (
+        YEAR ( MIN ( 'Calendario'[Date] ) ),
+        MONTH ( MIN ( 'Calendario'[Date] ) ),
+        1
+    )
+RETURN
+IF (
+    NOT ISBLANK ( mIni )
+        && mIni >= DATE ( 2025, 5, 1 )
+        && mIni <= DATE ( 2027, 5, 1 ),
+    129999546,
+    BLANK ()
+)
+
+5️⃣ Rankings por cliente, campaña y canal
+
+🥇 Top Rank Clie – Ranking de clientes por desembolsos
+
+Calcula el ranking de clientes en función del promedio de desembolsos, respetando el contexto de filtros activo (segmento, región, campaña, etc.).
+
+Top Rank Clie =
+RANKX (
+    ALLSELECTED ( 'DVG3 Cliente'[ClienteID] ),
+    [Dese PROM],
+    ,
+    DESC,
+    DENSE
+)
+
+
+🏆 Top3 Rank Camp – Ranking de campañas
+
+Ranking de campañas según el promedio de desembolsos. Permite identificar las campañas más efectivas.
+
+Top3 Rank Camp =
+RANKX (
+    ALLSELECTED ( 'DVG3 Campania'[CampaniaNombre] ),
+    [Dese PROM],
+    ,
+    DESC,
+    DENSE
+)
+
+
+📈 Top3 Rank Canal – Ranking de canales
+
+Ranking de canales comerciales por desempeño en desembolsos.
+
+Top3 Rank Canal =
+RANKX (
+    ALLSELECTED ( 'DVG3 Canal'[CanalNombre] ),
+    [Dese PROM],
+    ,
+    DESC,
+    DENSE
+)
 
