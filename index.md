@@ -855,11 +855,15 @@ A continuación, se presentan las principales pantallas del reporte desarrollado
 
 
 🖼️ 2. Planteamiento del Business Case
+![BusinessCase](./04-Capa-Presentacion/imagen2.png)
 
 🖼️ 3. Indicador Mensual — Definición, Fórmula, Impacto y Rangos
+![Indicador](./04-Capa-Presentacion/imagen3.png)
 
 🖼️ 4. Dashboard Comercial del BCP
+![Dashboard](./04-Capa-Presentacion/imagen4.png)
 
 🖼️ 5. Reporte Ejecutivo — What / So What / Now What
+![ReporteEjecutivo](./04-Capa-Presentacion/imagen5.png)
 
 
