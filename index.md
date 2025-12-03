@@ -994,6 +994,47 @@ Visualización principal:
 Obtener detalles (Drill Through):
 ![Detalle P10](./04-Capa-Presentacion/imagen25.png)
 
+# ✅ Conclusiones — Aprendizajes y Resultados Obtenidos
+✔ 1. Integración de datos confiable y automatizada
+
+La implementación del flujo completo (ETL en Fabric + SQL Warehouse + limpieza en Python) permitió construir una fuente única de verdad, eliminando duplicidades y garantizando consistencia en los indicadores mensuales del BCP.
+
+✔ 2. Reducción significativa del tiempo de procesamiento
+
+Automatizar la preparación del KPI redujo el tiempo operativo de actualización manual y consultas dispersas. El cálculo del indicador dejó de tomar horas y pasó a ser totalmente reproducible en segundos, mejorando la eficiencia operativa.
+
+✔ 3. Mejor entendimiento del comportamiento comercial
+
+El análisis segmentado por Región, Sucursal, Canal, Producto, Campaña y Ejecutivo reveló patrones clave que no eran visibles en reportes tradicionales. Esto permitió identificar los principales impulsores de participación crediticia y los segmentos con menor aporte.
+
+✔ 4. Dashboard ejecutivo más claro y accionable
+
+El uso del gauge/semáforo y visualizaciones comparativas simplificó la interpretación del KPI. Los decisores ahora pueden ver en segundos si el indicador está en zona verde, amarilla o roja, facilitando decisiones tácticas y estratégicas.
+
+✔ 5. Alineamiento con objetivos de negocio
+
+El análisis respaldó el Business Case, confirmando el impacto económico de variaciones pequeñas en la participación mensual. Con datos más precisos y visuales más claras, se logra soportar decisiones comerciales con fundamento cuantitativo.
+
+✔ 6. Aprendizajes técnicos sólidos
+
+El proyecto consolidó conocimientos avanzados en:
+
+Modelado dimensional (Data Warehouse)
+
+Power BI y DAX para KPIs de negocio
+
+Orquestación con Microsoft Fabric
+
+Procesamiento automatizado con Python
+
+Storytelling con datos y diseño de dashboards ejecutivos
+
+✔ 7. Entrega profesional con enfoque corporativo
+
+La construcción del flujo completo —desde la capa de datos hasta la capa de presentación— demostró la capacidad del equipo para replicar un proceso real de analítica empresarial, como el que se utiliza en áreas de inteligencia comercial, finanzas y estrategia.
+
+
+
 ## 📘 Participación del Grupo
 <section style="padding: 50px 0;">
   <h2 style="font-size: 30px; font-weight: 700; margin-bottom: 15px;">Participación del Grupo</h2>
