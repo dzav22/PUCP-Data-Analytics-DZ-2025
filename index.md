@@ -989,3 +989,74 @@ Visualización principal:
 Obtener detalles (Drill Through):
 ![Detalle P10](./04-Capa-Presentacion/imagen25.png)
 
+
+<section style="padding: 60px 0; text-align: center;">
+  <h2 style="font-size: 42px; font-weight: 700; margin-bottom: 10px;">Stack Tecnológico</h2>
+  <div style="width: 80px; height: 4px; background:#c27b3a; margin: 0 auto 40px auto; border-radius: 2px;"></div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; width: 90%; margin: auto;">
+    
+    <!-- Tarjeta 1 -->
+    <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
+                box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.04)'"
+         onmouseout="this.style.transform='scale(1)'">
+      <img src="https://img.icons8.com/fluency/96/ms-fabric.png" width="55" />
+      <h3 style="font-size:20px; margin-top: 10px;">Microsoft Fabric</h3>
+      <p style="color:#555; font-size: 15px;">Ingesta, transformación y orquestación del flujo de datos.</p>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
+                box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.04)'"
+         onmouseout="this.style.transform='scale(1)'">
+      <img src="https://img.icons8.com/color/96/python.png" width="55" />
+      <h3 style="font-size:20px; margin-top: 10px;">Python</h3>
+      <p style="color:#555; font-size: 15px;">Automatizaciones, validaciones y cálculos ETL.</p>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
+                box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.04)'"
+         onmouseout="this.style.transform='scale(1)'">
+      <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/96/external-database-data-analytics-flaticons-lineal-color-flat-icons.png" width="55" />
+      <h3 style="font-size:20px; margin-top: 10px;">SQL Warehouse</h3>
+      <p style="color:#555; font-size: 15px;">Almacenamiento estructurado y consultas de alto rendimiento.</p>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
+                box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.04)'"
+         onmouseout="this.style.transform='scale(1)'">
+      <img src="https://img.icons8.com/color/96/power-bi.png" width="55" />
+      <h3 style="font-size:20px; margin-top: 10px;">Power BI</h3>
+      <p style="color:#555; font-size: 15px;">Dashboard estratégico e insights interactivos.</p>
+    </div>
+
+    <!-- Tarjeta 5 -->
+    <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
+                box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.04)'"
+         onmouseout="this.style.transform='scale(1)'">
+      <img src="https://img.icons8.com/external-anggara-flat-anggara-putra/96/external-data-analytics-business-anggara-flat-anggara-putra.png" width="55" />
+      <h3 style="font-size:20px; margin-top: 10px;">DAX</h3>
+      <p style="color:#555; font-size: 15px;">Cálculo de KPIs avanzados y lógica de negocio.</p>
+    </div>
+
+    <!-- Tarjeta 6 -->
+    <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
+                box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.04)'"
+         onmouseout="this.style.transform='scale(1)'">
+      <img src="https://img.icons8.com/color/96/city-buildings.png" width="55" />
+      <h3 style="font-size:20px; margin-top: 10px;">Data Warehouse</h3>
+      <p style="color:#555; font-size: 15px;">Modelo dimensional optimizado para análisis del KPI.</p>
+    </div>
+
+  </div>
+</section>
+
+
