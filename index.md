@@ -882,10 +882,11 @@ c) Drill through (detalle)
 ¿Cuáles son los tres tipos de canal que registraron el mayor aporte promedio en el INDICADOR MENSUAL DEL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL BCP durante el período comprendido entre mayo de 2025 y mayo de 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 1)
+![Pregunta 1](./imagen6.png)
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 1)
+![Detalle Pregunta 1](./imagen7.png)
+
 
 2️⃣ Pregunta 2 — Sucursales
 ¿Cuáles son las tres Sucursales que registraron el mayor aporte promedio en el INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período comprendido entre mayo de 2025 y mayo de 2026?
