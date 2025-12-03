@@ -882,10 +882,12 @@ c) Drill through (detalle)
 ¿Cuáles son los tres tipos de canal que registraron el mayor aporte promedio en el INDICADOR MENSUAL DEL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL BCP durante el período comprendido entre mayo de 2025 y mayo de 2026?
 
 Visualización principal:
-![Pregunta 1](./imagen6.png)
+![Pregunta 1](./04-Capa-Presentacion/imagen6.png)
+
 
 Obtener detalles (Drill Through):
-![Detalle Pregunta 1](./imagen7.png)
+![Detalle P1](./04-Capa-Presentacion/imagen7.png)
+
 
 
 2️⃣ Pregunta 2 — Sucursales
