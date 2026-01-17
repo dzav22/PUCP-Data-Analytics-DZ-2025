@@ -1044,16 +1044,7 @@ La construcción del flujo completo —desde la capa de datos hasta la capa de p
       </tr>
       <tr>
           <td style="border: 1px solid #000; padding: 8px;">Diego Zavaleta</td>
-          <td style="border: 1px solid #000; padding: 8px;">50%</td>
-      </tr>
-      <tr>
-          <td style="border: 1px solid #000; padding: 8px;">Wilfredo Bazán</td>
-          <td style="border: 1px solid #000; padding: 8px;">50%</td>
-      </tr>
-      <tr>
-          <td style="border: 1px solid #000; padding: 8px; font-weight:700;">Total</td>
-          <td style="border: 1px solid #000; padding: 8px; font-weight:700;">100%</td>
-      </tr>
+          <td style="border: 1px solid #000; padding: 8px;">100%</td>
   </table>
 </section>
 
