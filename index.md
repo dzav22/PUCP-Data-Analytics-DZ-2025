@@ -1034,19 +1034,9 @@ El proyecto consolidó conocimientos avanzados en:
 La construcción del flujo completo —desde la capa de datos hasta la capa de presentación— demostró la capacidad del equipo para replicar un proceso real de analítica empresarial, como el que se utiliza en áreas de inteligencia comercial, finanzas y estrategia.
 
 ---
-<section style="padding: 50px 0;">
-  <h2 style="font-size: 30px; font-weight: 700; margin-bottom: 15px;">Participación del Grupo</h2>
-
-  <table style="border-collapse: collapse; width: 380px; font-size: 16px;">
-    <tr>
-      <th style="border: 1px solid #000; padding: 8px; background:#f2f2f2;">Participante</th>
-      <th style="border: 1px solid #000; padding: 8px; background:#f2f2f2;">Participación en el proyecto</th>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #000; padding: 8px;">Diego Zavaleta</td>
-      <td style="border: 1px solid #000; padding: 8px;">100%</td>
-    </tr>
-  </table>
+<section style="padding: 32px 0;">
+  <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 10px;">Autores del proyecto</h2>
+  <p style="font-size: 16px; margin: 0;">Diego Zavaleta · Wilfredo Bazan</p>
 </section>
 
 ---
